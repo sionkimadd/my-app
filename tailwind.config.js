@@ -9,7 +9,13 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ['light', 'dim']
+    themes: [
+      "light", 
+      "dim",
+      "pastel",
+      "dark",
+      "emerald"
+    ]
   },
   darkMode: ['selector', '[data-theme="dim"]']
 }

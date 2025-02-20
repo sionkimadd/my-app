@@ -25,7 +25,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
 
   return (
     <div className="sticky top-4 z-50 flex justify-center px-4 md:px-8 lg:px-0">
-      <div className="navbar bg-base-300 rounded-xl shadow-lg px-6 py-3 max-w-4xl w-full">
+      <div className="navbar bg-base-300 rounded-xl px-6 py-3 max-w-4xl w-full">
         <span className="countdown font-mono text-2xl hidden md:inline">
           <span style={{ "--value": parseInt(hours) } as CSSProperties}></span>:
           <span style={{ "--value": parseInt(minutes) } as CSSProperties}></span>:

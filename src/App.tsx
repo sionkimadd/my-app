@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 
 const App = () => {
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dim");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -14,7 +14,7 @@ const App = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dim" : "light");
+    setTheme(theme === "dim" ? "emerald" : "dim");
   };
 
   return (
@@ -26,6 +26,7 @@ const App = () => {
       <div className="pt-10">
         <Introduction 
           name="Sion Kim"
+          image={`${process.env.PUBLIC_URL}/profile.png`}
           job="Student"
           description="IT enthusiast who loves science, stock investing, and exploring quantum computing." />
         <Projects
@@ -34,14 +35,14 @@ const App = () => {
             {
               subTitle: "EZDB",
               description: "Designed for MySQL",
-              image: "/ezdb.png",
+              image: `${process.env.PUBLIC_URL}/ezdb.png`,
               link: "https://ezdb.info/",
               skills: ["Python", "MySQL", "EC2"],
             },
             {
               subTitle: "Project 2",
               description: "Desc.",
-              image: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
+              image: `${process.env.PUBLIC_URL}/ezdb.png`,
               link: "https://example.com",
               skills: ["Skill 1", "Skill 2"],
             },
